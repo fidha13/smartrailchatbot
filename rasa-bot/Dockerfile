@@ -1,9 +1,13 @@
-FROM rasa/rasa:3.6.0
+FROM python:3.10
 
 WORKDIR /app
 
-COPY . /app
+COPY . .
+
+RUN pip install -r requirements.txt
 
 RUN rasa train
 
-CMD ["rasa","run","--enable-api","--cors","*","--port","$PORT"]
+EXPOSE 5005
+
+CMD ["rasa","run","--enable-api","--cors","*","--port","5005"]
