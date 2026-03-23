@@ -1,8 +1,9 @@
 {
   "build": {
-    "builder": "NIXPACKS"
+    "builder": "NIXPACKS",
+    "buildCommand": "cd rasa-bot && pip install -r ../requirements.txt && rasa train"
   },
   "deploy": {
-    "startCommand": "cd rasa-bot && rasa train && rasa run --enable-api --port $PORT --cors \"*\""
+    "startCommand": "cd rasa-bot && rasa run --enable-api --port $PORT --cors \"*\""
   }
 }
