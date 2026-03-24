@@ -1,0 +1,108 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - search_train
+  - seat_recommendation
+  - wl_prediction
+  - wl_train
+  - wl_skip
+  - wl_number
+  - train_number
+  - coach_select
+  - start_train_search
+entities:
+  - from_location
+  - to_location
+  - type
+  - coach
+slots:
+  from_location:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: from_location
+
+  to_location:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: to_location
+
+  train_number:
+    type: text
+    mappings:
+      - type: custom
+
+  coach:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: coach
+
+  wl_number:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: custom    
+
+responses:
+  utter_greet:
+    - text: "👋 Hey! How can I help you with your train journey today?"
+
+  utter_goodbye:
+    - text: "👋 Goodbye! Have a safe journey!"
+
+  utter_iamabot:
+    - text: "🤖 I am your SmartRail assistant."
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great! Let me know if you need train details."
+  
+  utter_ask_stations:
+    - text: "Please tell me the stations. Example: TVC to ERN."
+
+  utter_affirm_response:
+    - text: "Great! What would you like to do next?"
+
+  utter_main_menu:
+  - text: "What would you like to do next?"
+    buttons:
+      - title: "Check another train"
+        payload: "/wl_prediction"
+
+      - title: "Find trains between stations"
+        payload: "/start_train_search"
+
+      - title: "Seat recommendation"
+        payload: "/seat_recommendation"
+
+      - title: "Check WL prediction "
+        payload: "/wl_prediction"  
+actions:
+  - action_search_train
+  - action_seat_recommendation
+  - action_predict_wl
+  - action_ask_train_number
+  - action_ask_wl_number
+  - action_validate_train_number
+  - action_wl_prediction
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

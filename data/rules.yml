@@ -1,0 +1,55 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+- rule: seat recommendation
+  steps:
+    - intent: seat_recommendation
+    - action: action_seat_recommendation
+
+- rule: start wl prediction
+  steps:
+  - intent: wl_prediction
+  - action: action_predict_wl
+
+- rule: enter train number
+  steps:
+  - intent: wl_train
+  - action: action_ask_train_number
+
+- rule: skip train number
+  steps:
+  - intent: wl_skip
+  - action: action_ask_wl_number
+
+- rule: user enters train number
+  steps:
+  - intent: train_number
+  - action: action_validate_train_number
+
+- rule: user enters wl number
+  steps:
+  - intent: wl_number
+  - action: action_predict_wl  
+
+- rule: ask waiting list after coach
+  steps:
+  - intent: coach_select
+  - action: action_ask_wl_number
+
+- rule: Start train search
+  steps:
+    - intent: start_train_search
+    - action: utter_ask_stations   
+
