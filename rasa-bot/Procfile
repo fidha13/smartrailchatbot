@@ -1,1 +1,0 @@
-web: rasa run --enable-api --cors "*" --port $PORT
