@@ -10,7 +10,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from typing import Any, Text, Dict, List
 
 
-API_BASE = "http://localhost:5001/api"
+API_BASE = "https://smartrail.up.railway.app/api"
 
 
 # -----------------------------
