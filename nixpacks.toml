@@ -1,0 +1,5 @@
+[phases.build]
+cmds = ["pip install -r requirements.txt"]
+
+[phases.start]
+cmd = "rasa train && rasa run --enable-api --port $PORT --cors \"*\""

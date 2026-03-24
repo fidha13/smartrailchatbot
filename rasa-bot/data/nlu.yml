@@ -1,0 +1,198 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - intent: affirm
+    - yes
+    - yeah
+    - ok
+    - okay
+    - sure
+    - fine
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: search_train
+  examples: |
+    - trains from [TVC](from_location) to [KTYM](to_location)
+    - trains from [ABC](from_location) to [XYZ](to_location)
+    - train from [AAA](from_location) to [BBB](to_location)
+    - show trains from [AAA](from_location) to [BBB](to_location)
+    - find trains between [AAA](from_location) and [BBB](to_location)
+    - I want trains from [AAA](from_location) to [BBB](to_location)
+    - trains [AAA](from_location) to [BBB](to_location)
+    - [AAA](from_location) to [BBB](to_location) trains
+    - trains between [AAA](from_location) and [BBB](to_location)
+    - trains from Thiruvananthapuram Central to Kottayam
+    - trains from Ernakulam Junction to Kollam Junction
+    - trains from Kozhikode to Kottayam
+    - trains from Piravom Road to Ernakulam Junction
+    - trains from Feroke to Kottayam
+    - trains from Kollam Junction to Thiruvananthapuram Central
+    - show trains from Thiruvananthapuram Central to Ernakulam Junction
+    - trains between Ernakulam Junction and Kottayam
+
+- intent: seat_recommendation
+  examples: |
+    - best seat for elderly
+    - which berth is best for elderly
+    - seat for elderly passenger
+    - best berth for senior citizen
+    - seat recommendation
+    - best seat for pregnant woman
+    - best seat for kids
+    - seat for baby
+    - which berth should I choose
+    - recommended seat in trains
+    - best seat for elderly
+    - seat for senior citizen
+    - travelling with elderly person
+    - best seat for kids
+    - travelling with children
+    - best seat for pregnant woman
+    - seat recommendation
+    - suggest a seat
+    - best berth
+    - which seat should I choose
+
+- intent: wl_prediction
+  examples: |
+    - waiting list
+    - check waiting list
+    - waiting list prediction
+    - wl prediction
+    - check wl
+    - predict wl
+
+- intent: train_number
+  examples: |
+    - 12801
+    - train number 12801
+    - my train number is 12625
+    - 12625
+    - 16343
+
+- intent: wl_number
+  examples: |
+    - WL12
+    - WL5
+    - wl10
+    - 12
+    - my waiting list is 15   
+
+- intent: coach_select
+  examples: |
+    - SL
+    - 3A
+    - 2A
+    - CC
+    - 2S  
+
+- intent: start_train_search
+  examples: |
+    - find trains between stations
+    - train between stations
+    - search trains between stations
+    - show trains between stations
+    - find train route
+    - trains between two stations
+    - check trains between stations
+    - I want to find trains between stations     
+
+- intent: wl_skip
+  examples: |
+    - skip
+    - skip train number
+    - continue without train number
+    - no train number
+
+- intent: wl_train
+  examples: |
+    - enter train number
+    - give train number
+    - I have train number
+    - yes train number                  

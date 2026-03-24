@@ -1,0 +1,4 @@
+rasa
+rasa-sdk
+requests
+sqlalchemy<2.0
