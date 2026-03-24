@@ -21,7 +21,7 @@ function App() {
     try {
 
       const response = await fetch(
-        "http://localhost:5005/webhooks/rest/webhook",
+        "http://smartrail.up.railway.app/webhooks/rest/webhook",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
